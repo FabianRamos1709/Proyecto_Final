@@ -108,10 +108,10 @@ const TextoDescripcion = styled.div`
 function Container() {
     const carouselRef = useRef(null);
 
-    /*const changeImage = () => {
+    const changeImage = () => {
       const carouselInstance = window.M.Carousel.getInstance(carouselRef.current);
       carouselInstance.next();
-    };*/
+    };
 
     useEffect(() => {
       // Inicializando el carrusel
@@ -121,12 +121,12 @@ function Container() {
           indicators: true,
         });
       }
-      /*const interval = setInterval(() => {
+      const interval = setInterval(() => {
         changeImage();
       }, 4000); // Cambiar la imagen cada 4 segundos
 
       return () => clearInterval(interval);
-      */
+      
     }, []);
 
     return (
