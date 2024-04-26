@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import carniceria2 from "../img/carniceria2.avif"
 import carniceria3 from "../img/carniceria3.jpg"
+import historia1 from "../media/historia.mp4"
 
 const LineaSeparadora = styled.hr`
   margin-top: 0;
@@ -39,12 +40,12 @@ const Sobre_Nosotros = () => {
   return (
     <>
         <section className="center">
-                <h3 className=" white-text "> Nuestra Historia </h3>
-                <LineaSeparadora/>
-            <div className="responsive-video center">
-                <iframe width="500" height="300" src="https://www.youtube.com/embed/BI9NH9YG_ak" title="Carnicerías modernas: Carnicerías de diseño del mundo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <br/>
+            <h3 className=" white-text "> Nuestra Historia </h3>
+            <LineaSeparadora/>
+            <video className="responsive-video" controls>
+                <source src={historia1} type="video/mp4"/>
+            </video>
+            <br/><br/><br/>
         </section>
         <section className="red darken-4">
             <Historia>
