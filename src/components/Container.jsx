@@ -69,7 +69,7 @@ const Producto = styled.img`
 const Subtitulos2 = styled.h2`
   color: #FFF;
   font-family: 'Sedan', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 0px;
   margin-bottom: 10px;
 `

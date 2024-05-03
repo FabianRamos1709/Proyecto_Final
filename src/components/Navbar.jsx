@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
+import styled from '@emotion/styled';
+
+const BarraNav = styled.nav`
+  text-shadow: red 0.1em 0.1em 0.2em;
+`
 
 const Navbar = () => {
   return (
-    <nav className="transparent">
+    <BarraNav className="transparent">
       <div className="nav-wrapper">
-        <ul id="nav-mobile" className="right on-med-and-down">
+        <ul id="nav-mobile" className="on-med-and-down">
           <li><Link to = "/">Inicio</Link></li>
           <li><Link to = "/API">API</Link></li>
           <li><Link to = "/Contactenos">Contactenos</Link></li>
@@ -13,7 +18,7 @@ const Navbar = () => {
           <li><Link to = "/Registrarse">Registrarse</Link></li>
         </ul>
       </div>
-    </nav>
+    </BarraNav>
   
   )
 }

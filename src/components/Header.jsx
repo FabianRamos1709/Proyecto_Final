@@ -3,7 +3,7 @@ import header1 from '../img/header1.jpg'
 import Navbar from "../components/Navbar"
 
 const Encabezado = styled.div`
-    height: 300px;
+    height: 400px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${header1});
     background-size: cover;
     @media (max-width: 768px) {
@@ -18,7 +18,7 @@ const Titulo = styled.h1`
     font-weight: 400;
     text-align: center;
     position: absolute;
-    top: 18%;
+    top: 25%;
     left: 18%;
     @media (max-width: 768px) {
       font-size: 2.5em;
