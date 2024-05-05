@@ -4,23 +4,21 @@ import Informacion from "./Informacion"
 
 const Api = () => {
 
-  const[characters,setCharacters] = useState({})
+  const[characters,setCharacters] = useState("")
   const[info, setInfo] = useState({})
-  console.log(characters)
-
+  
   useEffect(() => {
-    if(Object.keys(characters).length > 0){
+    if(characters !== ""){
       const buscarCharacter = async () => {
-        const personaje = characters
-        const url = `https://rickandmortyapi.com/api/character/${personaje}`  
+        const url = `https://rickandmortyapi.com/api/character/${characters}`  
 
         const respuesta = await fetch(url)
         const info = await respuesta.json()
       
-        setInfo(info.DISPLAY[personaje])
+        setInfo(info)
       }
       buscarCharacter()
-    }
+    } 
   }, [characters])
   
 

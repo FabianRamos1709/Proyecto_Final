@@ -5,7 +5,9 @@ import Error from "./Error"
 const FormaBuscador = ({setCharacters}) => {
 
     const [personajes, setPersonajes] = useState([])
+
     const[error, setError] = useState(false) 
+
     const [personaje, SelectPersonaje] = useSelectPersonaje("Selecciona el personaje que quieres ver:", personajes)
     
   useEffect( () =>{
@@ -28,7 +30,7 @@ const FormaBuscador = ({setCharacters}) => {
  
   const handleSubmit = e => {
     e.preventDefault()
-    if (personaje.includes('')){
+    if (personaje === ""){
       setError(true)
 
       return

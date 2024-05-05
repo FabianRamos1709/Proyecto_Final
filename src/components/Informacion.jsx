@@ -12,16 +12,18 @@ const Texto = styled.p`
     }
 `
 
-const Informacion = (info) => {
+const Informacion = ({info}) => {
 
-    const {name, species, gender, origin, image} = info
-  return (
+    console.log(info)
+
+    const {name, species, gender,image} = info
+
+   return (
     <Contenedor>
-        <img src= {`${image}`} alt = "Foto Personaje" />
-        <Texto> Nombre: <span>{name}</span></Texto>
+        <img src= {image} alt = "Foto Personaje" />
+        <Texto> Nombre: <span>{name}</span> </Texto> 
         <Texto> Especie: <span>{species}</span></Texto>
         <Texto> Género: <span>{gender}</span></Texto>
-        <Texto> Origen: <span>{origin.name}</span></Texto>
     </Contenedor>
   )
 }

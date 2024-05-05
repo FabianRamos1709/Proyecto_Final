@@ -28,6 +28,7 @@ const useSelectPersonaje = (label, opciones) => {
         </Select>
         </>
     )
+
         return [state, SelectPersonaje]
 }
 
