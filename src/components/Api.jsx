@@ -1,34 +1,35 @@
-import { useEffect, useState } from "react"
-import useSelectPersonaje from "../hooks/useSelectPersonaje"
-
+import FormaBuscador from "./FormaBuscador"
+import { useState, useEffect } from "react"
+import Informacion from "./Informacion"
 
 const Api = () => {
 
-  const [personajes, setPersonajes] = useState([])
+  const[characters,setCharacters] = useState({})
+  const[info, setInfo] = useState({})
+  console.log(characters)
 
-  const [personaje, SelectPersonaje] = useSelectPersonaje("Selecciona el personaje que quieres ver:", personajes)
+  useEffect(() => {
+    if(Object.keys(characters).length > 0){
+      const buscarCharacter = async () => {
+        const personaje = characters
+        const url = `https://rickandmortyapi.com/api/character/${personaje}`  
 
-  useEffect( () =>{
-    const consultarApi = async() => {
-        const url = "https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
         const respuesta = await fetch(url)
-        const resultado = await respuesta.json()
-    
-        const arrayPersonajes = resultado.map(personaje => {
-            const objeto = {
-                id: personaje.id,
-                nombre: personaje.name
-            }
-            return objeto
-        })
-        setPersonajes(arrayPersonajes)
+        const info = await respuesta.json()
+      
+        setInfo(info.DISPLAY[personaje])
+      }
+      buscarCharacter()
     }
-    consultarApi();
-  }, [])
- 
+  }, [characters])
+  
+
   return (
     <>
-     
+         <FormaBuscador
+          setCharacters = {setCharacters}
+         />
+         {info.name && <Informacion info = {info}/>} 
     </>
   )
 }

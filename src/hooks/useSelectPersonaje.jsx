@@ -1,30 +1,34 @@
 import { useState } from "react" 
+import styled from "@emotion/styled"
 
+const Select = styled.select`
+    width: 20%;
+    display: block;
+`
 const useSelectPersonaje = (label, opciones) => {
 
-    console.log(opciones)
     const [state, setState] = useState('') 
 
     const SelectPersonaje = () => (
         <>
         <label>{label}</label>
 
-        <select
+        <Select
             value = {state} 
-            onChange={e => setState(e.target.value)} 
+            onChange = {e => setState(e.target.value)} 
         >
             <option value = "" > Seleccione un personaje </option>
 
-            {opciones.map(opcion => (
+            {opciones.map( opcion => (
                 <option
-                key = {opcion.id}
-                value = {opcion.nombre}
-                >{opcion.nombre}</option>
-            ))}    
-        </select>
+                key = {opcion.nombre}
+                value = {opcion.id}
+                > {opcion.nombre} </option>
+            ))}     
+        </Select>
         </>
     )
-        return [state, SelectPersonaje]   
-    }
+        return [state, SelectPersonaje]
+}
 
-    export default useSelectPersonaje
+export default useSelectPersonaje
