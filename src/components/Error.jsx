@@ -1,19 +1,22 @@
 import styled from "@emotion/styled"
 
 const Texto = styled.div`
-    background-color: #B7322C;
+    margin-top: 20px;
+    background-color: #d50000;
     color: #FFF;
     padding: 15px;
-    font-size: 22px;
+    font-size: 18px;
     text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Sedan', sans-serif;
     font-weight: 700;
-    text-align: center
+    text-align: center;
+    width: 60%;
+    margin: 30px auto;
 `
 
 const Error = ({children}) => {
   return (
-    <Texto> {children} </Texto>
+      <Texto> {children} </Texto>
   )
 }
 
