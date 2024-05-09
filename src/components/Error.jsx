@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
 
 const Texto = styled.div`
-    margin-top: 20px;
     background-color: #d50000;
     color: #FFF;
     padding: 15px;
@@ -10,13 +9,15 @@ const Texto = styled.div`
     font-family: 'Sedan', sans-serif;
     font-weight: 700;
     text-align: center;
-    width: 60%;
+    width: 70%;
     margin: 30px auto;
+    border: 1px solid #000;
+    box-shadow: 0px 10px 10px black;
 `
 
 const Error = ({children}) => {
   return (
-      <Texto> {children} </Texto>
+      <Texto> <i className="material-icons prefix">report</i>{children}<i className="material-icons prefix">report</i> </Texto>
   )
 }
 
