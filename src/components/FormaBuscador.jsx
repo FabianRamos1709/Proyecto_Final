@@ -3,7 +3,7 @@ import useSelectPersonaje from "../hooks/useSelectPersonaje"
 import Error from "./Error"
 import styled from "@emotion/styled"
 
-const StyledButton = styled.input`
+const StyledButton = styled.button`
     background-color: #38b20d;
     box-shadow: 5px 5px rgba(0,0,0,0.5);
     font-weight: 700;
@@ -20,7 +20,11 @@ const StyledButton = styled.input`
     }
 
     &:active {
-        background-color: #367e39; 
+      background-color: #37CC03; 
+    }
+    &:focus {
+      outline: none;
+      background-color: #37CC03; 
     }
 `
 const FormaBuscador = ({setCharacters}) => {
@@ -33,7 +37,8 @@ const FormaBuscador = ({setCharacters}) => {
     
   useEffect( () =>{
     const consultarApi = async() => {
-        const url = "https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30"
+        const numbers = Array.from({ length: 100 }, (_, index) => index + 1);
+        const url = `https://rickandmortyapi.com/api/character/${numbers}`
         const respuesta = await fetch(url)
         const resultado = await respuesta.json()
     
@@ -67,7 +72,9 @@ const FormaBuscador = ({setCharacters}) => {
     <>
     <form onSubmit={handleSubmit}>
         <SelectPersonaje/>
-        <StyledButton type="submit" value="Buscar Personaje" />
+        <StyledButton type="submit">
+          Buscar Personaje
+        </StyledButton> 
     </form>
     {error && <Error> No has seleccionado un personaje </Error> }
     </>

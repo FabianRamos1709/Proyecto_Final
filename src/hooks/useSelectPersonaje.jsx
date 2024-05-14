@@ -34,7 +34,7 @@ const useSelectPersonaje = (label, opciones) => {
 
                 {opciones.map( opcion => (
                     <option
-                    key = {opcion.nombre}
+                    key = {opcion.id.toString()}
                     value = {opcion.id}
                     > {opcion.nombre} </option>
                 ))}     

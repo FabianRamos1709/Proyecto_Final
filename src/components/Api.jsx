@@ -5,17 +5,22 @@ import styled from "@emotion/styled"
 
 const Info = styled.div`
   padding-top: 25px;
-  height: 450px;
+  height: 510px;
   width: 50%;
 `
 const ContenedorFormulario = styled.div`
   width: 50%;
-  height: 450px;
+  height: 510px;
+  padding-top: 20px;
   text-align: center;
   background-color: #b71c1c;
 `
 const ContenedorFormInfo = styled.div`
   display:flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const LineaSeparadora = styled.hr`
   margin-top: 0;
@@ -24,7 +29,6 @@ const LineaSeparadora = styled.hr`
   background-color: #E1AD01;
   width: 80%;
 `
-
 const Api = () => {
 
   const[characters,setCharacters] = useState("")
