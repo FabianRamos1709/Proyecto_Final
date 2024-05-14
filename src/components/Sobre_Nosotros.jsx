@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import carniceria2 from "../img/carniceria2.avif"
 import carniceria3 from "../img/carniceria3.jpg"
-import historia1 from "../media/historia.mp4"
+import historia1 from "../img/historia.gif"
 
 const LineaSeparadora = styled.hr`
   margin-top: 0;
@@ -42,9 +42,7 @@ const Sobre_Nosotros = () => {
         <section className="center">
             <h3 className=" white-text "> Nuestra Historia </h3>
             <LineaSeparadora/>
-            <video className="responsive-video" controls>
-                <source src={historia1} type="video/mp4"/>
-            </video>
+            <img src={historia1}/>
             <br/><br/><br/>
         </section>
         <section className="red darken-4">

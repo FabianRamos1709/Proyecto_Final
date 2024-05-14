@@ -43,21 +43,21 @@ const Registrarse = () => {
                 <div className="row ">
                     <div className="input-field col s10 offset-s1">
                         <i className="material-icons prefix">email</i>
-                        <input id="email" type="text" className="validate" required/>
+                        <input id="email" type="text" className="validate" autoComplete="username"required/>
                         <label htmlFor="email">Correo Electronico</label>
                     </div>
                 </div>
                 <div className="row ">
                     <div className="input-field col s10 offset-s1">
                         <i className="material-icons prefix">lock</i>
-                        <input id="password" type="password" className="validate" required/>
+                        <input id="password" type="password" className="validate" autoComplete="new-password" required/>
                         <label htmlFor="password">Contraseña</label>
                     </div>
                 </div>
                 <div className="row ">
                     <div className="input-field col s10 offset-s1">
                         <i className="material-icons prefix">lock</i>
-                        <input id="confirm_password" type="password" className="validate" required/>
+                        <input id="confirm_password" type="password" className="validate" autoComplete="new-password" required/>
                         <label htmlFor="confirm_password">Confirmar Contraseña</label>
                     </div>
                 </div>

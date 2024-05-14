@@ -42,15 +42,15 @@ const Footer = () => {
             <ul>
               <li><h5>Contactenos</h5></li>
               <LineaSeparadora3/>
-              <li>Direccion: Crr 1 #70-6</li>
-              <li>telefono: 3134567876</li>
+              <li>Dirección: Crr 1 #70-6</li>
+              <li>Teléfono: 3134567876</li>
               <li>E-mail: lacarniceria@gmail.com</li>
             </ul>
           </div>   
         </div>
         <div className="footer-copyright">
             <div className="container center">
-                © 2024 Copyright Text
+                © 2024 Copyright
             </div>
         </div>
     </footer>

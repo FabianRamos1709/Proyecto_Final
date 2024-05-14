@@ -19,11 +19,11 @@ const Subtitulo = styled.h1`
   font-size: 35px;
 `
 const ImgCarousel = styled.img`
-  width: 80%;
+  width: 1080px;
   height: 400px;
 `
 const ContenedorCarrousel = styled.div`
-  width: 80%;
+  width: 1080px;
   height: 400px;
   margin: auto;
   margin-bottom: 30px;

@@ -9,7 +9,7 @@ const StyledButton = styled.button`
     font-weight: 700;
     color: black; 
     padding: 10px 20px; 
-    font-size: 16px; 
+    font-size: 18px; 
     border: none; 
     border-radius: 10px;
     cursor: pointer; 
@@ -72,9 +72,9 @@ const FormaBuscador = ({setCharacters}) => {
     <>
     <form onSubmit={handleSubmit}>
         <SelectPersonaje/>
-        <StyledButton type="submit">
-          Buscar Personaje
-        </StyledButton> 
+        <StyledButton type="submit" >Buscar personaje
+          <i className="material-icons right">search</i>
+        </StyledButton>
     </form>
     {error && <Error> No has seleccionado un personaje </Error> }
     </>
