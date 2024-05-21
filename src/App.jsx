@@ -6,6 +6,7 @@ import Sobre_Nosotros from "./components/Sobre_Nosotros";
 import Registrarse from "./components/Registrarse";
 import Iniciar_Sesion from "./components/Iniciar_Sesion"
 import Api from "./components/Api";
+import ScrollToTop from "./ScrollTop";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Header/>
       <Routes>
         <Route path="/" exact element={<Container/>}/> 

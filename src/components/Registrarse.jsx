@@ -43,7 +43,7 @@ const Registrarse = () => {
                 <div className="row ">
                     <div className="input-field col s10 offset-s1">
                         <i className="material-icons prefix">email</i>
-                        <input id="email" type="text" className="validate" autoComplete="username"required/>
+                        <input id="email" type="email" className="validate" autoComplete="username"required/>
                         <label htmlFor="email">Correo Electronico</label>
                     </div>
                 </div>

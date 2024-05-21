@@ -33,14 +33,14 @@ const Iniciar_Sesion = () => {
                 <div className="row">
                     <div className="input-field col s12">
                         <i className="material-icons prefix">account_circle</i>
-                        <input id="email" type="text" className="validate" required/>
+                        <input id="email" type="email" className="validate" required autoComplete="username"/>
                         <label htmlFor="email">E-mail</label>
                     </div>
                 </div>      
                 <div className="row">
                     <div className="input-field col s12">
                         <i className="material-icons prefix">lock</i>
-                        <input id="password" type="text" className="validate" required/>
+                        <input id="password" type="password" className="validate" required autoComplete="current-password"/>
                         <label htmlFor="password">Contraseña</label>
                     </div>
                 </div>
